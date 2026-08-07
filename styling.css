@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montenegrin+Gothic+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ffead2;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+.hea{
+    position: sticky;
+    top: 0;
+    background-color: #ffead2;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    box-shadow: rgb(194, 213, 66);
+    border-bottom: 4px solid #ff8800;
+    max-width:100%;
+    z-index: 1000;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    padding: 0 0.5rem;
+
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+.hea a{
+    text-decoration: none;
+    color: #ff8800;
+}
+.navbar a{
+    text-decoration: none;
+    color: #FF8800;
+}
+.navbar a:hover {
+    color:#ffa83e;
+}
+.hea a:hover{
+    color:#ffa83e;
+}
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.hr{
+    opacity: 100%;
+    color: #FFD700;
+}
+.h-content{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 5rem 10rem;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    min-height: 100vh;
+    justify-content: space-around;
+    gap: 30px;
+}
+.h-content p span{
+    font-weight: 700;
+    font-size: 20px;
+}
+.h-content h1{
+    font-size: 60px;
+    margin-top: 10px;
+}
+.title{
+    font-size: 20px;
+    color: #0e0802;
+    margin: 10px 0;
+    font-weight: 500;
+}
+.social{
+    margin: 1rem 0 2rem;
+}
+.social i{
+    font-size: 18px;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+    font-weight: 500;
+    color: #FF8800;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3 ease;
+}
+.social i:hover{
+    transform: scale(0.85);
+}
+.btn-prim{
+    background-color: #ff8800;
+    color: #ffead2;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.im-prof{
+    width: 95%;
+    height: 75%;
+    position: relative;
+    left:10px ;
+    top: 10px;
+}
+.im-prof img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left:60%;
+    transform: translateX(-50%);
+    transition: bottom 1s ,left 1s;
+}
+.im-prof:hover .shape{
+    bottom: 20px;
+}
+.im-prof:hover .pic{
+    left: 45%;
+}
+.aboutMe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    gap: 0.1rem;
+    background-color: #0e0802;
+    min-height: 100vh;
+}
+.textContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-tittle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 3rem;
+}
+.about-al{
+    color:#ffffff;
+}
+.about-end{
+    color:#ff8800;
+}
+.aboutMe-par{
+    text-align: justify;
+    color: #ffa83e;
+    padding: 2rem;
+    letter-spacing: 2px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.aboutMeImg{
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.textContainer,about-al, about-end{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.projects-section{
+    background-color:#ffead2;
+    min-height: 100vh;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    gap: 0.1rem;
+}
+.projects-grid{
+    grid-template-columns: repeat(auto-fit,minmax(320,1fr));
+    display:grid;
+    gap: 2rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.project-card{
+    width: 320px;
+    background-color:#FF8800;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #FF8800;
+    transition: transform 0.3 ease ,box-shadow 0.3 ease;
+}
+.project-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px #0e0802;
+    border-color:#0e0802;
+}
+.project-thumbnail{
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    background-color:#ffa83e;
+}
+.project-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3 ease;
+}
+.project-card:hover  .project-thumbnail img{
+     transform: scale(1.05);
+}
+.project-content{
+    padding: 1.5rem;
+}
+.project-label{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: aliceblue;
+   
+    margin-bottom: 0.75rem;
+}
+.project-description{
+    font-size: 0.95;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+     color: rgb(236, 238, 185);
+}
+.project-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color:#FFD700;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95;
+    transition: gap 0.35 ease;
+}
+.project-link:hover{
+    gap: 0.75rem;
+}
+.tittle{
+    align-items: center;
+    padding: 2rem;
+    font-size: 5rem;
+     display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subtitle{
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+     display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects-section{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.contacting{
+    background-color:#0e0802;
+    min-height: 100vh;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 100%;
+    gap: 0.1rem;
+}
+.row{
+    margin:4rem;
+    display:flexbox;
+    justify-content: center;
+    justify-self: center;
+    column-gap: 2rem;
+    background: #0e0802;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    max-width: 1100px;
+    margin: 0.1rem;
+}
+.titre{
+    padding: 1rem;
+    font-size: 4rem;
+    align-items: center;
+    justify-self: center;
+    padding:2rem;
+    color: #FF8800;
+}
+.text-primary{
+    color: #ffead2;
+}
+.putin{
+    display: block;
+    width: 70%;
+    margin: 20px 0;
+    padding: 10px;
+    justify-self: center;
+    background-color: #ffead2;
+    border: 1px solid #0e0802;
+    outline: none;
+}
+.Me-message{
+    justify-self: center;
+    display: block;
+    width: 70%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffead2;
+    border: 1px solid #0e0802;
+    outline: none;
+}
+.contact-img{
+     width: 50%;
+     margin:auto;
+     height: auto;
+     object-fit: cover;
+     margin: auto;
+    display: block;
+}
+.forming{
+    align-items: center;
+}
+.contacting{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.footer{
+    background-color: #ffead2;
+    color: #0e0802;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+.check{
+    position: relative;
+width: 30px;
+cursor: pointer;
+}
+.check::before{
+position: absolute;
+content: '';
+width: 25px;
+height: 15px;
+background: #0e0802;
+border-radius: 25px;
+}
+.check:checked::before{
+background:#FF8800;
+
+}
+.check::after{
+content:'';
+position: absolute;
+left: 0px;
+width: 15px;
+height: 15px;
+background: #ffffff;
+border-radius: 25px;
+transition: 0.25s;
+border:2px solid #0e0802;
+box-sizing: border-box;
+}
+.check:checked::after{
+left:12px;
+border:2px solid #FF8800;
+}
+.check:checked ~ .titre{
+display:none;
+}
+.check:checked ~.titre{
+display: block;
+}
+.English{
+color:#0e0802;
+}
+.Arabic{
+color:#FF8800;
+}
+
+@media (max-width:1025px){
+    .h-content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+    .about-al + .about-end{
+        font-size: 3rem;
+    }
+    .about-al{
+        font-size: 3rem;
+    }
+    .titre{
+        font-size: 3rem;
+    }
+    .tittle{
+        font-size: 3rem;
+    }
+    .im-prof{
+        width: 60%;
+        top: -70px;
+        left: 50px;
+    }
+    .shape{
+        width: 100%;
+        height: auto;
+    }
+    .pic{
+        width: 100%;
+        size: auto ;
+    }
+    .social{
+        justify-content: center;
+        gap: 20px;
+    }
+    
+}
